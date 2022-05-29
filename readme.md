@@ -1,4 +1,4 @@
-# Section 5
+# Section 5:Project 1 - Getting Started with FastAPI
 ## 48. FastAPI Project: Swagger, HTTP Request Methods, and Status Codes Overview 
 
 ### View OpenAPI Schema
@@ -43,3 +43,5 @@ following the same kind of path.
 ## 61. FastAPI Assignment Solution
 - `/assignment/` Query parameter
 - `/{assignment}` Path parameter
+
+# Section 6:FastAPI Request Method Logic
