@@ -31,3 +31,7 @@ also known as CRUD operations
 
 ## 49. FastAPI Project: Swagger and HTTP Decorators
 - uvicorn books:app --reload
+
+## 53. FastAPI Project: Path Parameters
+If you going to be using path parameters, the path parameters must be underneath any kind of API that's going to be
+following the same kind of path. 
