@@ -50,6 +50,12 @@ async def update_book(book_name: str, book_title: str, book_author: str):
     return book_information
 
 
+@app.delete("/{book_name}")
+async def delete_book(book_name):
+    del BOOKS[book_name]
+    return f'BOOK {book_name} deleted'
+
+
 class DirectionName(str, Enum):
     north = "North"
     south = "South"
