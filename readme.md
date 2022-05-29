@@ -39,4 +39,7 @@ following the same kind of path.
 ## 54. FastAPI Project: Enumeration Path Parameters
 - enum mixin
   - https://docs.python.org/3/library/enum.html#others
- 
+
+## 61. FastAPI Assignment Solution
+- `/assignment/` Query parameter
+- `/{assignment}` Path parameter

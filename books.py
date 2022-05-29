@@ -56,6 +56,23 @@ async def delete_book(book_name):
     return f'BOOK {book_name} deleted'
 
 
+'''
+1. Create a new read book function that uses query params instead of path params.
+2. Create a new delete book function that uses query params instead of path params.
+'''
+
+
+@app.get("/assignment/")
+async def read_book_assignment(book_name: str):
+    return BOOKS[book_name]
+
+
+@app.delete("/assignment/")
+async def delete_book_assignment(book_name: str):
+    del BOOKS[book_name]
+    return BOOKS
+
+
 class DirectionName(str, Enum):
     north = "North"
     south = "South"
