@@ -29,14 +29,23 @@ async def read_book(book_name: str):
     return BOOKS[book_name]
 
 
+@app.post("/")
+async def create_book(book_title, book_author):
+    current_book_id = 0
+
+    if len(BOOKS) > 0:
+        for book in BOOKS:
+            x = int(book.split('_')[-1])
+            if x > current_book_id:
+                current_book_id = x
+
+    BOOKS[f'book_{current_book_id + 1}'] = {'title': book_title, 'author': book_author}
+    return BOOKS[f'book_{current_book_id + 1}']
+
+
 @app.get("/books/mybook")
 async def read_favorite_book():
     return {"book_title": "My favorite book"}
-
-
-@app.get("/books/{book_id}")
-async def read_book(book_id: int):
-    return {"book_title": book_id}
 
 
 class DirectionName(str, Enum):
