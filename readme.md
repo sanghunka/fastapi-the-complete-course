@@ -28,3 +28,6 @@ also known as CRUD operations
 - 3xx: Redirection: Further action must be complete
 - 4xx: Client Errors: An error was caused by the request from the client
 - 5xx: Server Errors: An error has occured on the server
+
+## 49. FastAPI Project: Swagger and HTTP Decorators
+- uvicorn books:app --reload
