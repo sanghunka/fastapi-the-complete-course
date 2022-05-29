@@ -35,3 +35,8 @@ also known as CRUD operations
 ## 53. FastAPI Project: Path Parameters
 If you going to be using path parameters, the path parameters must be underneath any kind of API that's going to be
 following the same kind of path. 
+
+## 54. FastAPI Project: Enumeration Path Parameters
+- enum mixin
+  - https://docs.python.org/3/library/enum.html#others
+ 
