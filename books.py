@@ -43,9 +43,11 @@ async def create_book(book_title, book_author):
     return BOOKS[f'book_{current_book_id + 1}']
 
 
-@app.get("/books/mybook")
-async def read_favorite_book():
-    return {"book_title": "My favorite book"}
+@app.put("/{book_name}")
+async def update_book(book_name: str, book_title: str, book_author: str):
+    book_information = {'title': book_title, 'author': book_author}
+    BOOKS[book_name] = book_information
+    return book_information
 
 
 class DirectionName(str, Enum):
@@ -53,6 +55,8 @@ class DirectionName(str, Enum):
     south = "South"
     east = "East"
     west = "West"
+
+
 @app.get("/directions/{direction_name}")
 async def get_direction(direction_name: DirectionName):
     if direction_name == DirectionName.north:
