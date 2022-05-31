@@ -44,4 +44,11 @@ following the same kind of path.
 - `/assignment/` Query parameter
 - `/{assignment}` Path parameter
 
-# Section 6:FastAPI Request Method Logic
+# Section 8:HTTP Exceptions and Status Codes
+
+## 78. FastAPI Project: Form Fields
+
+```async def book_login(username: str = Form(...), password: str = Form(...)):```
+
+- If we do not use this form, then our application in FastAPI is going to automatically assume that this is a query parameter 
+- Do not have to type `...` after FastAPI 0.78
