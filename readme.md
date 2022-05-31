@@ -52,3 +52,9 @@ following the same kind of path.
 
 - If we do not use this form, then our application in FastAPI is going to automatically assume that this is a query parameter 
 - Do not have to type `...` after FastAPI 0.78
+
+## Quiz 4:
+- Question 1:API Headers are what?
+  - [ ] Allow APIs to send additional information to each request/response
+  - [ ] Are Key:Value pairs
+  - [x] Both 
