@@ -69,6 +69,15 @@ following the same kind of path.
   - [x] A way to declare things that are required for the application/function to work by injecting the dependencies
   - [ ] A way to say that this function may or may not depend on something
 
+# Section 10:Setup Database
+
+## 90. FastAPI Project: SQLite3 Setting Up Todos
+
+- .schema
+- .quit
+- .mode markdown
+  - mode should be one of: ascii box column csv html insert json line list markdown quote table tabs tcl
+
 # Section 12 Authentication & Authorization
 
 ## 96. JSON Web Token (JWT) Overview
