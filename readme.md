@@ -68,3 +68,69 @@ following the same kind of path.
 - What is Depends() in FastAPI?
   - [x] A way to declare things that are required for the application/function to work by injecting the dependencies
   - [ ] A way to say that this function may or may not depend on something
+
+# Section 12 Authentication & Authorization
+
+## 96. JSON Web Token (JWT) Overview
+
+### What is a JSON Web Token
+
+- JSON Web Token is a self-contained way to securely transmit data and information between two parties using a JSON Object.
+- JSON Web Tokens can be trusted because each JWT can be digitally signed, which in return allows toe server to know if the JWT has been changed at all
+- JWT should be used when dealing with authorization (JWT is not an authentication method)
+- JWT is a great way for information to be exchanged between the server and client
+
+### JSON Web Token Structure
+
+`aaaaaaaa.bbbbbbbb.cccccccc`
+
+- A JSON Web Token is created of three separated parts separated by dots(.) which include:
+  - Header: (a)
+  - Payload: (b)
+  - Signature: (c)
+
+### JWT Header
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+- A JWT Header usually consist of two parts:
+  - "alg" The algorithm for signing
+  - "typ" The specific type of token
+- The JWT header is then encoded using Base64 to create the first part of the JWT (a)
+
+### JWT Payload
+
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+```
+
+- A JWT Payload consists of the data. The payloads data contains claims, and there are three different types of claims.
+  - Registered
+  - Public
+  - Private
+- The JWT Payload is then encoded using Base64 to create the second part of the JWT (b)
+
+### JWT Signature
+
+
+```
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+```
+
+- A JWT Signature is created by using the algorithm in the header to hash out the encoded header, encoded payload with a secret.
+- The secret can be anything, but is saved somewhere on the server that the client does not have access to
+- The signature is the third and final part of a JWT (c)
+
+[https://jwt.io/](https://jwt.io/)
