@@ -58,3 +58,13 @@ following the same kind of path.
   - [ ] Allow APIs to send additional information to each request/response
   - [ ] Are Key:Value pairs
   - [x] Both 
+
+# Section 11:API Request Methods
+
+## Quiz 5:
+
+### Question 1:
+
+- What is Depends() in FastAPI?
+  - [x] A way to declare things that are required for the application/function to work by injecting the dependencies
+  - [ ] A way to say that this function may or may not depend on something
