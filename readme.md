@@ -143,3 +143,14 @@ HMACSHA256(
 - The signature is the third and final part of a JWT (c)
 
 [https://jwt.io/](https://jwt.io/)
+
+# Section 15:Routing
+
+## 130. Routing Introduction
+
+### What is routing
+
+- Rare that you want your entire application to be on a single file
+- Flexible tool to structure your application
+- Scalable architecture
+- Organize file structure
