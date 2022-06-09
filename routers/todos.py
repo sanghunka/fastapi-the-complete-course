@@ -1,5 +1,5 @@
 import sys
-sys.path.append("..")
+sys.path.append("../TodoApp")
 
 from typing import Optional
 from fastapi import Depends, HTTPException, APIRouter
