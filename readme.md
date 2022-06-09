@@ -173,3 +173,30 @@ HMACSHA256(
 - Alembic is a powerful migration tool that allows us to modify our database schemes
 - As our application evolves, our database will need to evolve as well
 - Alembic helps us be able to keep modifying our database to keep up with rapid development requirements
+
+## 140. Alembic Introduction
+
+| Git Command                    | Details                                     |
+|--------------------------------|---------------------------------------------|
+| alembic init <folder name>     | Initializes a new, generic environment      |
+| alembic revision -m <message>  | Creates a new revision of the environment   |
+| alembic upgrade <revision #>   | Run our upgrade migration to our database   |
+| alembic downgrade <revision #> | Run our downgrade migration to our database |
+
+### How does alembic work?
+
+- After we initialize our project with alembic, two new items will appear in our directory
+- First file is the alembic.ini file
+- Second, is the alembic directory
+
+### Alembic.ini file?
+
+- Has configuration for alembic
+- Is the file that alembic looks for when invoked
+
+### Alembic Directory
+
+- Has all environmental properties for alembic
+- Holds all revisions of your application
+- Where you call migrations for upgrading
+- Where you call migrations for downgrading
